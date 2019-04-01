@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewData["Title"] = "LinuxBasicCommands";
+}
+
+<br />
+<br />
+<div style="margin:auto;background-color:ghostwhite;border-radius:10px;border: 1px ghostwhite #233047" class="col-md-7">
+
+    <br />
+    <hr />
+    <h2 id="articleName">Basic Linux Commands</h2>
+
+
+    @*<h3>Subtitle</h3>*@
+    <br />
+    <p><strong>By Juan Aguilar</strong></p>
+    <p><em>May 26, 2018</em></p>
+    <hr />
+
+    <br />
+
+    <p>Here is a quick cheat sheet for Linux commands. I've used these commands in my Linux so yeah! Testing stuff for the purpose of science. For CentOS clickable word for more info</p>
+    <p>Commands</p>
+    <p><strong>~</strong> = home directory</p>
+    <p><strong>ls</strong> = list</p>
+    <p><strong>ls -l</strong> or <strong>ll</strong> = list the directory with details</p>
+    <p><strong>pwd</strong> = (print working directory) show current directory</p>
+    <p><strong>cd</strong> = change directories</p>
+    <p><strong>who</strong> = shows users currently logged in on the machine</p>
+    <p><strong>uptime</strong> = how long the machine has been up</p>
+    <p><strong>id</strong> = prints user and group IDs</p>
+    <p><strong>groups</strong> = prints the groups that the user is part of (always lists the primary group first)</p>
+    <p><strong>last</strong> = prints a list of all successful logins</p>
+    <p><strong>last b</strong> = prints a list of all failed logins</p>
+    <p><strong>last reboot</strong> = prints a list of all reboots</p>
+    <p><strong>clear</strong> = clear the terminal screen</p>
+    <p><strong>sudo</strong> = run the command as the superuser or another user</p>
+    <p><strong>uname -a</strong> = prints system information</p>
+    <p><strong>hostnamectl</strong> = view hostname</p>
+    <p><strong>hostnamectl set-hostname [your hostname]</strong> = set the hostname</p>
+    <p><strong>man [command]</strong> = manual for commands</p>
+    <p><strong>whatis</strong> = similar to man</p>
+    <p><strong>mkdir</strong> = make directory</p>
+    <p><strong>rmdir</strong> = remove directory</p>
+    <p><strong>rm [file name]</strong> = remove file</p>
+    <p><strong>cat [file name]</strong> = read output of file</p>
+    <p><strong>mv [file name] [new file location]</strong> = move a file</p>
+    <p><strong>cp [file name] [new file location]</strong> = copy a file</p>
+    <p><strong>reboot</strong> = immediately reboot the machine</p>
+    <p><strong>shutdown -r</strong> = reboot the machine in one minute</p>
+    <p><strong>shutdown -r +10</strong> = reboot the machine in ten minutes</p>
+    <p><strong>shutdown -r now</strong> = immediately reboot the machine</p>
+    <p><strong>useradd [username]</strong> = add user to machine</p>
+    <p><strong>passwd [username]</strong> = prompt to set the password for that user</p>
+    <p><strong>groups [username]</strong> = view groups for that user</p>
+    <p><strong>groupadd [group name]</strong> = add a group</p>
+    <p><strong>cat /etc/groups</strong> = lists all groups created</p>
+    <p><strong>usermod –a –G [group name] [username]</strong> = add a user to a group (appends groups)</p>
+    <p><strong>usermod –G [group name] [username]</strong> = add a user to a group but removes user from any other group except the primary group (does not append groups)</p>
+    <p><strong>userdel [username]</strong> = delete a user</p>
+    <p><strong>groupdel [group name]</strong> = delete a group</p>
+    <p><strong>gpasswd –d [username] [group name]</strong> = removes the user from the specified group</p>
+    <p><strong>usermod –g [group name [username]</strong> = assign the user a new primary group</p>
+    @*<p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>*@
+    @*<br />
+        @await Html.PartialAsync("CommentsPartialView")*@
+    <br />
+</div>
+<br />
+<br />

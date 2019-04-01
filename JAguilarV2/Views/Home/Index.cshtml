@@ -2,7 +2,131 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<br />
+<br />
+
+@*WhiteBackground*@
+<div style="margin:auto;background-color:ghostwhite;border-radius:10px;border: 1px ghostwhite #233047" class="col-md-7">
+
+    <br />
+
+    <div class="container-fluid">
+        <div class="row" style="justify-content: center ">
+            <div class="col-xs-3 col-md-3">
+                <img class="bookImage" src="~/Images/Home/HyperViolets.png" />
+            </div>
+
+        </div>
+        <div class="row" style="justify-content: center ">
+            <div class="col-xs-9 col-md-9" style="text-align: center">
+                <h3>Hi, my name is Juan Aguilar.</h3>
+                <h3>I like system administration and art.</h3>
+            </div>
+        </div>
+    </div>
+
+
+    <br />
+
+    <p class="customTitle"><strong>About Me</strong></p>
+    <p class="generalText"> I’m a graduate from Neumont College of Computer Science with a Bachelor's degree in Information Systems. Information Systems is about the administration of IT networks using various technologies and operating systems. The website you are seeing right now was built from scratch by me. I utilized ASP.NET and Amazon Web Services (AWS) as the main technologies. This website started off as a Capstone Project for my Senior year at Neumont, but I thought to keep it and expand upon it. Also, the lovely chibi of myself that you see at the top of the page was done by Mioree. Go check out her work at <a href="https://www.twitch.tv/mioree" target="_blank">twitch.tv/mioree</a>. </p>
+
+    <br />
+
+    <p class="customTitle"><strong>Hobbies & Interests</strong></p>
+
+    <div style="margin-left: 15px;margin-right: 15px;">
+        <button data-toggle="collapse" data-target="#book" class="expandButton">&#x25BC; Book of the Month</button>
+    </div>
+    <div class="container-fluid">
+        <div class="collapse subMenuBackground" id="book">
+            <div style="margin: 15px">
+                <br />
+                <center><p>One of my New Year's resolutions is to read at least one book each month. Here is a list of books I've read/reading so far.</p></center>
+                <br />
+                <center><p style="font-size:20px"><strong>2019</strong></p></center>
+                <ul>
+                    <li>March: Harry Potter and the Sorcerer's Stone by J.K. Rowling</li>
+                    <li>February - March: Good as Gone: A Novel of Suspense by Amy Gentry</li>
+                    <li>December - January: Eleanor Oliphant is completely fine by Gail Honeyman</li>
+                </ul>
+                <center><p style="font-size:20px"><strong>2018</strong></p></center>
+                <ul>
+                    <li>December: Eleanor Oliphant is completely fine by Gail Honeyman</li>
+                    <li>November - December: Mass Effect: Annihilation by Catherynne M. Valente</li>
+                    <li>November: Rhett & Link's Book of Mythicality: A Field Guide to Curiosity, Creativity, and Tomfoolery by Rhett McLaughlin & Link Neal</li>
+                    <li>October: Turtles All the Way Down by John Green</li>
+                    <li>September: The Projectionist (a tale of magic & fortune) by Justin Black</li>
+                    <li>January - August: Francis of the Filth by George Miller and Joji</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div style="margin-left: 15px;margin-right: 15px;">
+        <button data-toggle="collapse" data-target="#ink" class="expandButton">&#x25BC; InkTober 2018</button>
+    </div>
+    <div class="container-fluid">
+        <div class="collapse subMenuBackground" id="ink">
+            <br />
+            <p style="margin: 15px;text-align:justify">"Every October, artists all over the world take on the Inktober drawing challenge by doing one ink drawing a day the entire month." Since I like looking at art so much, I decided to try my hand at digital art. This was my first time doing digital art. Sadly, I wasn't able to one art piece each day, but I've enjoyed the art works I've managed to do.</p>
+            <br />
+            <div class="row">
+                <div class="col-xs-6 col-md-4">
+                    <img class="bookImage" src="~/images/Home/InkTober2018/InkToberDayOne.png" />
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <img class="bookImage" src="~/images/Home/InkTober2018/InkToberDayTwo.png" />
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <img class="bookImage" src="~/images/Home/InkTober2018/InkToberDayThree.png" />
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <img class="bookImage" src="~/images/Home/InkTober2018/InkToberDayFour.png" />
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <img class="bookImage" src="~/images/Home/InkTober2018/InkToberDayFive.png" />
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <img class="bookImage" src="~/images/Home/InkTober2018/InkToberDaySix.png" />
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <img class="bookImage" src="~/images/Home/InkTober2018/InkToberDaySeven.png" />
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <img class="bookImage" src="~/images/Home/InkTober2018/InkToberDayEight.png" />
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <img class="bookImage" src="~/images/Home/InkTober2018/InkToberDayNine.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    @*<div class="row" style="margin: 15px">
+        change image size to the right dimensions
+        800 X 533 pixels
+        <button class="col-md-1 slideButton" onclick="plusDivs(-1)">&#10094;</button>
+        <div class="col-md-10">
+            <img class="mySlides" src="~/Images/SlideshowImages/img1.jpeg">
+            <img class="mySlides" src="~/Images/SlideshowImages/img2.jpeg">
+            <img class="mySlides" src="~/Images/SlideshowImages/img3.jpeg">
+            <img class="mySlides" src="~/Images/SlideshowImages/img4.jpeg">
+        </div>
+        <button class="col-md-1 slideButton" onclick="plusDivs(+1)">&#10095;</button>
+        <script src="~/js/slideshow.js"></script>
+    </div>
+
+    <br />*@
+
 </div>
+
+<br />
+<br />
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
