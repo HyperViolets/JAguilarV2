@@ -77,5 +77,10 @@ namespace JAguilarV2.Controllers
         {
             return View("~/Views/Blog/Networking/TCPIPAndOSINetworkingModel.cshtml");
         }
+
+        public IActionResult EthernetAndTwistedPairCables()
+        {
+            return View("~/Views/Blog/Networking/EthernetAndTwistedPairCables.cshtml");
+        }
     }
 }
