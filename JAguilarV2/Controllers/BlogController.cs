@@ -82,5 +82,10 @@ namespace JAguilarV2.Controllers
         {
             return View("~/Views/Blog/Networking/EthernetAndTwistedPairCables.cshtml");
         }
+
+        public IActionResult WideAreaNetworkWAN()
+        {
+            return View("~/Views/Blog/Networking/WideAreaNetworkWAN.cshtml");
+        }
     }
 }
