@@ -87,5 +87,10 @@ namespace JAguilarV2.Controllers
         {
             return View("~/Views/Blog/Networking/WideAreaNetworkWAN.cshtml");
         }
+
+        public IActionResult IPv4()
+        {
+            return View("~/Views/Blog/Networking/IPv4.cshtml");
+        }
     }
 }
