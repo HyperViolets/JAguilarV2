@@ -92,5 +92,10 @@ namespace JAguilarV2.Controllers
         {
             return View("~/Views/Blog/Networking/IPv4.cshtml");
         }
+
+        public IActionResult IPv6()
+        {
+            return View("~/Views/Blog/Networking/IPv6.cshtml");
+        }
     }
 }
