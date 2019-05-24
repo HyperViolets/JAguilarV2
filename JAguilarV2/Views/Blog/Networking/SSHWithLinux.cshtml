@@ -1,0 +1,110 @@
+﻿
+@{
+    ViewData["Title"] = "SSH with Linux";
+}
+
+<br />
+<br />
+
+<div style="margin:auto;background-color:ghostwhite;border-radius:10px;border: 1px ghostwhite #233047" class="col-md-7">
+
+    <br />
+
+    <hr />
+    <h2 id="articleName" style="margin-left:15px;margin-right:15px;">SSH with Linux</h2>
+
+    @*<h3>Subtitle</h3>*@
+
+    <p class="generalText"><strong>By Juan Aguilar</strong></p>
+    <p class="generalText"><em>May 23, 2019</em></p>
+    <hr />
+
+    <br />
+
+    <h4 class="customTitle">What Is SSH?</h4>
+    <p class="generalText">
+        SSH stands for Secure Shell. SSH was designed to replace protocols like Telnet as a secure alternative. Telnet and similar protocols would send data in plain text. SSH solves this issue by encrypting the data. SSH is a tool for remote administration. It opens a shell prompt for executing shell commands on the remote machine. For a large majority of Linux machines, OpenSSH is built-in. Windows machines can use SSH by installing an application like PuTTY. SSH listens on port 22 by default, but you can change it.
+    </p>
+
+    <h4 class="customTitle">Using SSH</h4>
+    <p class="generalText">
+        On Linux, you open an SSH connection by typing this command in a terminal: <strong>ssh {user}&#64{host}</strong>. The "user" is the name of the user on the remote machine you want to use. The "host" is the IP address or Domain Name of the remote machine. This opens an encrypted connection.
+    </p>
+
+    <h4 class="customTitle">Authenticating</h4>
+    <p class="generalText">
+        When you run the ssh command, you have to authenticate the remote user  . There are three ways to authenticate.
+    </p>
+    <ul>
+        <li class="bulletPointGeneralText">Password Authentication: You input the password for the  remote account you're using to access the remote machine.</li>
+        <li class="bulletPointGeneralText">SSH Key with Passphrase: You input the passphrase (password) of the SSH Key instead of the password for the remote account.</li>
+        <li class="bulletPointGeneralText">SSH Key With No Passphrase: You aren't required to input anything. The SSH connection with automatically detect your SSH Key and authenticate itself.</li>
+    </ul>
+
+    <h4 class="customTitle">SSH Keys</h4>
+    <p class="generalText">
+        SSH keys are an alternative to Password Authentication on the remote account. SSH keys are composed of a public and private key. The public key is used for encrypting data and the private key is used for decrypting data. It's important to keep the private key private because it's a security concern. The public key is meant to be given out to people so they can encrypt messages going to you. SSH keys are recommended to use. They don't solely rely on a password. SSH keys don't expire so keep that in mind. SSH keys are stored on the machine so if your machine gets stolen then the private key is also gone.
+    </p>
+
+    <h4 class="customTitle">Generating SSH Keys</h4>
+    <ol>
+        <li class="bulletPointGeneralText"> Run this command on the local machine: <strong>ssh-keygen -t rsa</strong> <ul><li>It's recommended to create the keys in the default file path.</li><li>You can include a passphrase which has to be inputted each time you SSH into the remote machine.</li></ul></li>
+        <li class="bulletPointGeneralText"> Copy the public SSH key to the remote machine with: <strong>ssh-copy-id {user}&#64{host}</strong><ul><li>The "user" and "host" will be the remote machine</li></ul></li>
+        <li class="bulletPointGeneralText"> That's it! Now you can run the SSH command as usual.</li>
+    </ol>
+    <p class="generalText">
+        SSH keys are stored in <strong>~/.ssh/authorized_key</strong>. Known hosts are stored in <strong>~/.ssh/known_hosts</strong>. If the keys already exist in the file path then they will be overwritten.
+    </p>
+
+    <h4 class="customTitle">How Encryption Is Used</h4>
+    <p class="generalText">
+        SSH uses symmetric and asymmetric encryption. Hashing is also used to make sure the received data is intact and unmodified.
+    </p>
+    <ul>
+        <li class="bulletPointGeneralText">
+            Symmetric: using the same key to encrypt and decrypt
+            <ul>
+                <li>Faster, more efficient, and carries more data</li>
+                <li>Examples: Blowfish, AES, RC4, DES, RC5</li>
+            </ul>
+        </li>
+        <li class="bulletPointGeneralText">
+            Asymmetric: using a public key to encrypt and a private key to decrypt.
+            <ul>
+                <li>The public key is shared among other machines to encrypt data.</li>
+                <li>The private key is shared with NO ONE and is used to decrypt data that was encrypted with your public key.</li>
+                <li>Slower process compared to symmetric encryption</li>
+                <li>Examples: Diffie-Hellman, RSA, ECC, DSA</li>
+            </ul>
+        </li>
+    </ul>
+    <p class="generalText">
+        SSH actually uses symmetric encryption for the session and password authentication when no SSH key is present. That's because symmetric is faster than asymmetric. Asymmetric encryption is used to send the public keys for symmetric encryption when the SSH connection is created. Asymmetric encryption is also used for SSH Key authentication.
+    </p>
+
+    <h4 class="customTitle">References</h4>
+    <p class="citation">
+        Ellingwood, Justin. “Understanding the SSH Encryption and Connection Process.” <em>DigitalOcean</em>, DigitalOcean, 22 Oct. 2014, www.digitalocean.com/community/tutorials/understanding-the-ssh-encryption-and-connection-process#symmetric-encryption,-asymmetric-encryption,-and-hashes.
+    </p>
+    <p class="citation">
+        L., Linas. “How to Connect to Your Account Using PuTTy SSH Terminal.” <em>Hostinger Tutorials</em>, Hostinger Tutorials, 11 Oct. 2018, www.hostinger.com/tutorials/how-to-connect-to-your-account-using-putty.
+    </p>
+    <p class="citation">
+        Ladia, Aman. “SSH Tutorial for Beginners - How Does SSH Work.” <em>Hostinger Tutorials</em>, Hostinger Tutorials, 10 Nov. 2017, www.hostinger.com/tutorials/ssh-tutorial-how-does-ssh-work.
+    </p>
+    <p class="citation">
+        “Symmetric vs. Asymmetric Encryption – What Are Differences?” <em>SSL2BUY</em> , 7 Feb. 2019, www.ssl2buy.com/wiki/symmetric-vs-asymmetric-encryption-what-are-differences.
+    </p>
+    <p class="citation">
+        V., Tautvydas. “How to Set Up SSH Keys.” <em>Hostinger Tutorials</em>, Hostinger Tutorials, 4 Feb. 2019, www.hostinger.com/tutorials/ssh/how-to-set-up-ssh-keys.
+    </p>
+
+    @*<br />
+        @await Html.PartialAsync("CommentsPartialView")*@
+
+    <br />
+
+</div>
+
+<br />
+<br />

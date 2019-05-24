@@ -97,5 +97,10 @@ namespace JAguilarV2.Controllers
         {
             return View("~/Views/Blog/Networking/IPv6.cshtml");
         }
+
+        public IActionResult SSHWithLinux()
+        {
+            return View("~/Views/Blog/Networking/SSHWithLinux.cshtml");
+        }
     }
 }
