@@ -102,5 +102,15 @@ namespace JAguilarV2.Controllers
         {
             return View("~/Views/Blog/Networking/SSHWithLinux.cshtml");
         }
+
+        public IActionResult CodingCategory()
+        {
+            return View("~/Views/Blog/Coding/CodingCategory.cshtml");
+        }
+
+        public IActionResult PythonBasics()
+        {
+            return View("~/Views/Blog/Coding/PythonBasics.cshtml");
+        }
     }
 }
