@@ -11,12 +11,12 @@
     <br />
 
     <hr />
-    <h2 id="articleName" style="margin-left:15px;margin-right:15px;">SSH with Linux</h2>
+    <h2 id="articleName" style="margin-left:15px;margin-right:15px;">SSH & SFTP with Linux</h2>
 
     @*<h3>Subtitle</h3>*@
 
     <p class="generalText"><strong>By Juan Aguilar</strong></p>
-    <p class="generalText"><em>May 23, 2019</em></p>
+    <p class="generalText"><em>Updated: June 9, 2019</em></p>
     <hr />
 
     <br />
@@ -82,6 +82,18 @@
         SSH actually uses symmetric encryption for the session and password authentication when no SSH key is present. That's because symmetric is faster than asymmetric. Asymmetric encryption is used to send the public keys for symmetric encryption when the SSH connection is created. Asymmetric encryption is also used for SSH Key authentication.
     </p>
 
+    <h4 class="customTitle">SFTP</h4>
+    <p class="generalText">
+        SFTP stands for SSH File Transfer Protocol or Secure File Transfer Protocol. SFTP is part of the SSH protocol and in-turn uses similar mechanisms. It's used to transfer files from one computer to another while in an SSH session. It uses the same SSH keys or password authentication. If you have SSH keys for SSH then those same keys will work for SFTP.
+    </p>
+    <p class="generalText">
+        You start an SFTP session with: <strong>sftp {user}&#64{host}</strong>. It's works the same as SSH. SFTP also uses port 22 by default, but you can change it. Once in the SFTP session, you will be in the remote directory. You can use commands like pwd, ls, cd, mkdir, rename, rm, chmod, chown and others in the remote directory. To use commands in your local directory, you will prefix the commands with an "L". Example: lpwd, lls, lcd, lmkdir, lrename, and so on. Make sure you have write/read permissions on the remote computer.
+    </p>
+    <p class="generalText">
+        There are GUI interfaces for SFTP like WinSCP and FileZilla. However, I'll only go over the command line commands this time. With command line, the SFTP session will have <strong>sftp></strong> prefixed. This is how you know you're in an SFTP session. To download files from the remote computer you will use: <strong>get {filename}</strong>. To upload files use: <strong>put {filename}</strong>. To get or put a directory use: <strong>get -r {directory name}</strong> or <strong>put -r {directory name}</strong>. You can rename a file/directory by using: <strong>get {current name} {new name}</strong> or <strong>put {current name} {new name}</strong>. If the transfer fails use <strong>reget {filename}</strong> or <strong>reput {filename}</strong> to resume it. Use <strong>df</strong> to display statistics of the remote disk usage. For more help on SFTP commands type <strong>help</strong> or <strong>?</strong>.
+
+    </p>
+
     <h4 class="customTitle">References</h4>
     <p class="citation">
         Ellingwood, Justin. “Understanding the SSH Encryption and Connection Process.” <em>DigitalOcean</em>, DigitalOcean, 22 Oct. 2014, www.digitalocean.com/community/tutorials/understanding-the-ssh-encryption-and-connection-process#symmetric-encryption,-asymmetric-encryption,-and-hashes.
@@ -97,6 +109,9 @@
     </p>
     <p class="citation">
         V., Tautvydas. “How to Set Up SSH Keys.” <em>Hostinger Tutorials</em>, Hostinger Tutorials, 4 Feb. 2019, www.hostinger.com/tutorials/ssh/how-to-set-up-ssh-keys.
+    </p>
+    <p class="citation">
+        “How to Use Linux SFTP Command to Transfer Files.” <em>Linuxize</em>, 17 Nov. 2018, linuxize.com/post/how-to-use-linux-sftp-command-to-transfer-files/.
     </p>
 
     @*<br />
