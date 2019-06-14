@@ -112,5 +112,10 @@ namespace JAguilarV2.Controllers
         {
             return View("~/Views/Blog/Coding/PythonBasics.cshtml");
         }
+
+        public IActionResult LinuxGamingProton()
+        {
+            return View("~/Views/Blog/Linux/LinuxGamingProton.cshtml");
+        }
     }
 }
