@@ -117,5 +117,10 @@ namespace JAguilarV2.Controllers
         {
             return View("~/Views/Blog/Linux/LinuxGamingProton.cshtml");
         }
+
+        public IActionResult PackageManagers()
+        {
+            return View("~/Views/Blog/Linux/PackageManagers.cshtml");
+        }
     }
 }
