@@ -122,5 +122,10 @@ namespace JAguilarV2.Controllers
         {
             return View("~/Views/Blog/Linux/PackageManagers.cshtml");
         }
+
+        public IActionResult ServerRack()
+        {
+            return View("~/Views/Blog/Hardware/ServerRack.cshtml");
+        }
     }
 }
