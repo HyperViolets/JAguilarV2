@@ -127,5 +127,10 @@ namespace JAguilarV2.Controllers
         {
             return View("~/Views/Blog/Hardware/ServerRack.cshtml");
         }
+
+        public IActionResult EthernetPatchPanel()
+        {
+            return View("~/Views/Blog/Hardware/EthernetPatchPanel.cshtml");
+        }
     }
 }
