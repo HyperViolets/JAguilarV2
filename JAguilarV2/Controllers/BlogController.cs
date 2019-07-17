@@ -132,5 +132,10 @@ namespace JAguilarV2.Controllers
         {
             return View("~/Views/Blog/Hardware/EthernetPatchPanel.cshtml");
         }
+
+        public IActionResult WiFiOverview()
+        {
+            return View("~/Views/Blog/Networking/WiFiOverview.cshtml");
+        }
     }
 }
