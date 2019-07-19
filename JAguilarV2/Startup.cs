@@ -64,12 +64,6 @@ namespace JAguilarV2
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-            app.UseForwardedHeaders(new ForwardedHeadersOptions
-            {
-                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-            });
-
-
             app.UseAuthentication();
 
             app.UseMvc(routes =>
