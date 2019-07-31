@@ -137,5 +137,10 @@ namespace JAguilarV2.Controllers
         {
             return View("~/Views/Blog/Networking/WiFiOverview.cshtml");
         }
+
+        public IActionResult APTAndYUM()
+        {
+            return View("~/Views/Blog/Linux/APTAndYUM.cshtml");
+        }
     }
 }
