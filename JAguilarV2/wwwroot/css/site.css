@@ -110,6 +110,7 @@ footer {
     text-align: justify;
     font-size: 16px;
     margin: 16px;
+    word-wrap: break-word;
 }
 
 .bulletPointGeneralText {
@@ -117,12 +118,14 @@ footer {
     font-size: 16px;
     margin-left: 16px;
     margin-right: 16px;
+    word-wrap: break-word;
 }
 
 .customTitle {
     font-size: 26px;
     margin-left: 16px;
     margin-right: 16px;
+    word-wrap: break-word;
 }
 
 .citation {
