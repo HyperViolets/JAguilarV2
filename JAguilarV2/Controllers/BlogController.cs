@@ -142,5 +142,10 @@ namespace JAguilarV2.Controllers
         {
             return View("~/Views/Blog/Linux/APTAndYUM.cshtml");
         }
+
+        public IActionResult NetworkSwitchOverview()
+        {
+            return View("~/Views/Blog/Hardware/NetworkSwitchOverview.cshtml");
+        }
     }
 }
