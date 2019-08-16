@@ -147,5 +147,10 @@ namespace JAguilarV2.Controllers
         {
             return View("~/Views/Blog/Hardware/NetworkSwitchOverview.cshtml");
         }
+
+        public IActionResult RAIDLevels()
+        {
+            return View("~/Views/Blog/Hardware/RAIDLevels.cshtml");
+        }
     }
 }
