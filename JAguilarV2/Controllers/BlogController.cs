@@ -152,5 +152,10 @@ namespace JAguilarV2.Controllers
         {
             return View("~/Views/Blog/Hardware/RAIDLevels.cshtml");
         }
+
+        public IActionResult LinuxFileSystem()
+        {
+            return View("~/Views/Blog/Linux/LinuxFileSystem.cshtml");
+        }
     }
 }
